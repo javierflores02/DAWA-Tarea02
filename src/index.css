@@ -1,0 +1,231 @@
+* {
+  background: transparent;
+}
+#contenedor{
+  background-color: rgb(208, 208, 238)0ff;
+  padding: 2rem;
+  margin-top: 8rem;
+}
+.header, .content {
+  border-radius: 13px;
+  margin: 2px;
+  background-color: black;
+  background: linear-gradient(45deg, #29a3a3, #47d1d1) ;
+}
+
+.header-content p {
+  font-size: 32px ;
+}
+
+.header-content h4 {
+  font-size: 45px ;
+}
+
+img{
+  display: block;
+}
+
+.header > div {
+  width: 50%;
+}
+
+.header .header-content > div {
+  margin-left: 2px;
+}
+
+.header .header-content p, h4 {
+  color: white;
+}
+
+.header .header-content p {
+  margin-bottom: 0;
+}
+
+.header-img img{
+  vertical-align: bottom;
+  height: 100%;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
+.detalles > div > p:nth-child(1){
+  font-size: 60px;
+}
+
+.detalles > div > p:nth-child(2){
+  font-size: 18px;
+}
+
+.titulo{
+  margin-top: 20px;
+}
+
+.content > img {
+  height: 100%;
+  padding: 7px 5px 0 5px;
+}
+
+.from-country{
+  width: 45%;
+}
+
+.nombre-artista{
+  font-size: 40px;
+  margin-top: -70px;
+  margin-bottom: 0px;
+  color: white;
+}
+
+.card-relacionado{
+  width: 95%; 
+  background-color: white;
+  margin-left: 0px;
+  border: 1px;
+  border-radius: 10px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: white;
+  margin-bottom: 0.5rem;
+}
+
+.barra{
+  padding: 9px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.relacionado-nombre{
+  font-size: 35px;
+}
+
+.relacionado-descripcion{
+  font-size: 25px;
+}
+
+.popular-botones{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popular-contenedor{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 450px;
+}
+
+.relacionado-contenedor-imagen{
+  width: 100%;
+  height: 80%;
+  border-radius: 35%;
+  margin-left: -35px;
+}
+
+.relacionado-contenedor-texto{
+  display: flex;
+  align-items: center;
+  width: 70%;
+  margin-left: -20px
+}
+
+.popular-boton{
+  font-size: 16px;
+  background-color: #ffcc66;
+  border: 1px;
+  border-radius: 7px;
+  height: 3rem;
+  font-weight: bold;
+}
+
+@media screen and (max-width:650px) {
+  .header-content p {
+    font-size: 25px ;
+  }
+  .header-content h4 {
+    font-size: 35px ;
+  }
+  .detalles > div > p:nth-child(1){
+    font-size: 20px;
+  }
+  
+  .detalles > div > p:nth-child(2){
+    font-size: 8px;
+  }
+
+  .detalles > p > svg{
+    width: 8px;
+  }
+
+  .nombre-artista{
+    font-size: 20px;
+    margin-top: -40px;
+    margin-bottom: 0px;
+  }
+  
+  .relacionado-nombre{
+    font-size: 25px;
+  }
+
+  .relacionado-descripcion{
+    font-size: 15px;
+  }
+
+  #contenedor{
+    padding: 0.5rem;
+    margin-top: 6rem;
+  }
+
+  .popular-botones{
+    flex-wrap: wrap;
+  }
+
+  .popular-botones > div{
+    flex: 0 0 100%;
+    margin-top: 5px;
+  }
+  
+  .popular-contenedor{
+    height: 300px;
+  }
+
+  .relacionado-contenedor-imagen{
+    margin-left: -15px;
+  }
+
+  .relacionado-contenedor-texto{
+    margin-left: -10px
+  }
+
+  .popular-boton{
+    font-size: 12px;
+    height: 2rem;
+    font-weight: normal;
+  }
+}
+
+@media screen and (max-width:360px) {
+  .header-content p {
+    font-size: 12px ;
+  }
+  .header-content h4 {
+    font-size: 20px ;
+  }
+  .relacionado-nombre{
+    font-size: 15px;
+  }
+
+  .relacionado-descripcion{
+    font-size: 10px;
+  }
+
+  .nombre-artista{
+    font-size: 12px;
+  }
+
+  .popular-contenedor{
+    height: 250px;
+  }
+}
