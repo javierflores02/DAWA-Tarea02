@@ -3,6 +3,7 @@ import Nuevo from'./components/Nuevo'
 import Relacionado from'./components/Relacionado'
 import Barra from'./components/Barra'
 import Titulo from'./components/Titulo'
+import Reproductor from'./components/Reproductor'
 
 const App = () => {
 
@@ -16,6 +17,15 @@ const App = () => {
             "Nuevos",
             "Relacionados"
         ],
+        reproductor: {
+            imagen: "http://www.eloriente.net/home/wp-content/uploads/2014/06/michael-jackson-billie-jean.jpg",
+            cancion: "Billie Jean",
+            autor: "Michael Jackson",
+            tiempo: {
+                total: "2:20",
+                actual: "1:10"
+            }
+        },
         populares: [
             {
                 imagen: "https://pngimg.com/uploads/michael_jackson/michael_jackson_PNG27.png",
@@ -56,24 +66,26 @@ const App = () => {
         <div id="contenedor">
             <Barra usuario={datos.usuario.nombre} tipo={datos.usuario.tipo}/>
 
+            <Reproductor datos={datos.reproductor}/>
+
             <Titulo titulo={datos.titulos[0]} />
 
-            {datos.populares.map((popular)=>{
-                return <Popular imagen={popular.imagen} nombre={popular.nombre} apodo={popular.apodo}/>
+            {datos.populares.map((popular, index)=>{
+                return <Popular imagen={popular.imagen} nombre={popular.nombre} apodo={popular.apodo} key={"popular"+index}/>
             })}
 
             <Titulo titulo={datos.titulos[1]} />
 
             <div className="d-flex justify-content-between">
-                {datos.nuevos.map((nuevo)=>{
-                    return <Nuevo imagen={nuevo.imagen} nombre={nuevo.nombre}/>
+                {datos.nuevos.map((nuevo, index)=>{
+                    return <Nuevo imagen={nuevo.imagen} nombre={nuevo.nombre} key={"nuevo"+index}/>
                 })}
             </div>
 
             <Titulo titulo={datos.titulos[2]} />
 
-            {datos.relacionados.map((relacionado)=>{
-                return <Relacionado imagen={relacionado.imagen} nombre={relacionado.nombre} descripcion={relacionado.descripcion}/>
+            {datos.relacionados.map((relacionado, index)=>{
+                return <Relacionado imagen={relacionado.imagen} nombre={relacionado.nombre} descripcion={relacionado.descripcion} key={"relacionado"+index}/>
             })}
             
         </div>

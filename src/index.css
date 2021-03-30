@@ -9,7 +9,6 @@
 .header, .content {
   border-radius: 13px;
   margin: 2px;
-  background-color: black;
   background: linear-gradient(45deg, #29a3a3, #47d1d1) ;
 }
 
@@ -140,6 +139,62 @@ img{
   font-weight: bold;
 }
 
+.reproductor-contenedor{
+  display: flex;
+  justify-content: space-around;
+  background-color: #74c7c7;
+}
+
+.reproductor-barra-icono{
+  width: 35px;
+}
+
+#progressbar {
+  background-color: black;
+  border-radius: 13px;
+  padding: 3px;
+}
+
+#progressbar>div {
+  background-color: orange;
+  width: 40%;
+  height: 6px;
+  border-radius: 10px;
+}
+
+.reproductor-part{
+  flex: 0 0 40%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+.reproductor-part > div > p:nth-child(1){
+  font-size: 28px;
+  font-weight: bolder;
+}
+
+.reproductor-part > div > p:nth-child(2){
+  font-size: 18px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00cc66; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4dffa6; 
+}
+
 @media screen and (max-width:650px) {
   .header-content p {
     font-size: 25px ;
@@ -204,6 +259,15 @@ img{
     height: 2rem;
     font-weight: normal;
   }
+
+  .reproductor-part{
+    flex: 0 0 100%;
+  }
+
+  .reproductor-contenedor{
+    flex-wrap: wrap;
+  }
+  
 }
 
 @media screen and (max-width:360px) {
@@ -227,5 +291,15 @@ img{
 
   .popular-contenedor{
     height: 250px;
+  }
+
+  .reproductor-barra-icono{
+    width: 20px;
+  }
+}
+
+@media screen and (max-width:800px) {
+  .reproductor-barra-icono{
+    width: 20px;
   }
 }
